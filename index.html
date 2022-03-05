@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+        *{
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .head1{
+            position: relative;
+            top: -70px;
+            font-size: 15px;
+        }
+        main{
+            height: 100vh;
+            width: 100%;
+
+        }
+
+        body{
+            background: black;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        article{
+            height: 75vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+
+        }
+        header{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        .h1{
+            position: relative;
+            font-size: 3rem;
+            color: white;
+            opacity: 0.7;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            
+        }
+ 
+        .bg{
+            background: url(images/143-1436535_black-and-blue-laptop-computer-space-earth-horizon.jpg) no-repeat center center;
+            -webkit-background-size:cover ;
+            -moz-background-size:cover ;
+            -o-background-size:cover ;
+            background-size: cover;
+            height: 100vh;
+        
+        }
+        #s7{
+            position: relative;
+            height: 60vh;
+            width: 100%;
+        }
+
+        .tx{
+            position: relative;
+            top: 20%;
+        }
+        #bg2{
+            position: absolute;
+            top: 0;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        #nav2{
+            margin-left: 40vw;
+        }
+        #nav2::before{
+            content: "";
+            position: absolute;
+            top: 25%;
+            left: 0;
+            background-color: white;
+            height: 50%;
+            width: 7px;
+            border-radius: 50px;
+            opacity: 0.3;
+            transition: all 0.4s;
+        }
+        #nav2:hover:before{
+            opacity: 1;
+            left: -5px;
+        }
+        .p2{
+            animation: mymove3 5s infinite;
+            opacity: 0;
+            animation-delay: 2.1s;
+            z-index: -1;
+
+            }
+        .p1{
+            opacity: 0;
+            animation: mymove2 5s  infinite;;
+            animation-delay: 4.8s;
+            font-weight: bolder;
+            z-index: -1;
+
+
+        }
+        .p3{     
+            opacity: 0;
+            animation: mymove1 5s infinite;
+            animation-delay: 1.9s;
+            z-index: -1;
+
+        }
+        .img{
+            position: relative;
+            top: 12%;
+            left: 0;
+           display: flex;
+           align-items: center;
+           justify-content: start;
+           height: 20vh;
+           width: 100%;
+        }
+        .img img{
+            animation:spin 4s linear infinite;
+            margin-left: 3vw;
+        }
+        section p {
+            color: white;
+            width: 100%;
+            margin-bottom: 5vh;
+            text-align: left;
+            font-size: 18px;
+            
+        }
+        section a{
+            text-decoration: none;
+        }
+        section{
+            width: 100%;
+            margin: 6vh auto;
+        }
+        .padding{
+            padding: 10vw;
+        }
+        #all img:hover{
+            transform: scale(1.1);
+        }
+        #all img{
+            transition: transform .5s ease;
+        }
+        section div{
+            overflow: hidden;
+        }
+        .s2 button{
+            background: linear-gradient(270deg,rgba(131,235,149,.6) -2.78%,rgba(255,179,64,.6) 99.99%,#ff8469);
+            border: transparent;
+            outline: transparent;
+            padding: 2vh 3vw ;
+            border-radius: 50px;
+            opacity: 0.5;
+            color: white;
+            transition: all 0.3s;
+            margin-top: 5vh;
+        }
+        .s2 button:hover{
+            opacity: 1;
+            padding: 2vh 4vw ;
+            transform: scale(1.1);
+
+
+        }
+        .s2{
+            
+            background: url(images/Group\ 1.png) no-repeat center center;
+            -webkit-background-size:cover ;
+            -moz-background-size:cover ;
+            -o-background-size:cover ;
+            background-size: cover;
+            height:80vh;
+            width: 100%;
+            padding-top: 10vh;
+            
+        }
+        .top{
+            border-top: 1px solid gray;
+            
+        }
+        #s3 p{
+            position: relative;
+            font-size: 10rem;
+            white-space: nowrap;
+            overflow-x: hidden;
+            
+            
+        }
+        .s3{
+            background: url(images/photo-1624139283061-adee53a59791.jpg) no-repeat center center;
+            -webkit-background-size:cover ;
+            -moz-background-size:cover ;
+            -o-background-size:cover ;
+            background-size: cover;
+        }
+        #s4 p{
+            position: relative;
+            font-size: 10rem;
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+        #s6 img{
+            margin: 0.5vw;
+        }
+        #photo{
+            height: 60vh;
+            width: 520px;
+            overflow: hidden;
+
+        }
+        #fr{
+            display: flex;
+            justify-content: start;
+        }
+        #s8 img {
+            z-index: -1;
+        }
+
+
+
+
+/****************MEDIA QUERIS*******************/
+        @media only screen and (max-width:1000px) {
+            *{
+                font-size: 16px;
+            }
+            .img{
+                display: flex;
+           align-items: center;
+           justify-content: center;
+            }
+            #w1{
+                display: flex;
+                justify-content: center;
+            }
+            #bor{
+                position: relative;
+                padding-top: 10vh;
+            }
+           #bor::before{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 3px;
+               background-color: gray;
+               
+            }
+
+
+
+            #s5{
+            text-align: center;
+            }
+            #s5 p {
+            text-align: center;
+            }
+            #s5 button{
+            text-align: center;
+            }
+            #s6 img{
+            width: clamp(250px,90%,100%);
+            min-height: 100%;
+            transform: scale(1);
+            }
+
+
+            #s6{
+            transform: translate(-70%,-70%);
+            }
+
+            #s3{
+                text-align: center;
+            }
+         h5{
+            
+                font-size: 10px;
+            }
+
+            #nav2{
+            display: none;
+            }
+            #col2{
+             margin-top: 0;
+            }
+
+            }
+        /****************MEDIA QUERIS*******************/
+
+           
+
+
+
+
+ /****************KEYFRAMES*******************/
+
+@keyframes mymove1 {
+    0%{
+        transform: translate3d(0,100%,0);
+        opacity: 0;
+    }
+    50%{
+        transform: translate3d(0,-110%,0);
+        opacity: 1;
+    }
+    100%{
+        transform: translate3d(0,-190%,0);
+        opacity: 0;
+    }
+    
+}
+@keyframes mymove2 {
+    0%{
+        transform: translate3d(0,200%,0);
+        opacity: 0;
+    }
+    50%{
+        transform: translate3d(0,100%,0);
+        opacity: 1;
+    }
+    100%{
+        transform: translate3d(0,-15%,0);
+        opacity: 0;
+    }
+
+    
+}
+@keyframes mymove3 {
+    0%{
+        transform: translate3d(0,250%,0);
+        opacity: 0;
+    }
+    50%{
+        transform: translate3d(0,100%,0);
+        opacity: 1;
+    }
+    100%{
+        transform: translate3d(0,-50%,0);
+        opacity: 0;
+    }
+
+    
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+    </style>
+</head>
+<body>
+    <!--------------------Header------------------->
+    <div class="bg">
+        <header class="d-flex justify-content-between navbar-dark p-5 " >
+            <div class="text-white fs-5 mt-1">
+                LOGO
+            </div>
+            <div>
+                <nav id="nav2" class="navbar navbar-expand text-dark">
+                    <div class="container-fluid">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">ENG</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">AR</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">FR</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+            <div>
+                <nav class="navbar navbar text-dark me-3 text-center">
+                    <div class="container-fluid">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">ABOUT</a>
+                        </li>
+                      </ul>
+                    </div>        
+                  </nav>
+            </div>
+        </header>
+        <article>
+            <div class="h1">
+               <ul class="text-center" type="none" > 
+                  <li class="p1 display-1">Studio,Tokyo</li>
+                  <li class="p2 display-3"> Tokyo-born,Creative-studio</li>
+                  <li class="p3">From</li>
+               </ul>
+            </div>
+        </article>
+        <div class="img ">
+            <img src="images/download.svg" alt="">
+        </div>
+    </div>
+    <!--------------------Header------------------->
+
+
+
+
+    <!--------------------S1------------------->
+    <section class="container-fluid padding" >
+        <h5 id="head1" class="text-white"> &#8594 See Project</h5>
+        <div id="all" class="row d-xl-flex justify-content-between align-items-center text-center">
+            <div class="col-xl-6 ">
+                <div class="row">
+                  <a href="#">  <div id="col" class="col-xl-12 ">
+                        <div style="height: 80%;">
+                        <img src="images/nomad-thumbnail.jpg" width="100%" alt="">
+                        </div>
+                       <p> BnA Alter Museum <br>
+                        Art Direction Video Production Website
+                    </p>
+                    </div>
+                </a>
+                    <div class="col-xl-12 ">
+                        <div style="height: 80%;">
+
+                        <img src="images/mind-chatter-thumbnail.jpg" width="100%"  alt="">
+                        </div>
+                        <p> BnA Alter Museum <br>
+                            Art Direction Video Production Website
+                        </p>
+                    </div>
+                    <div class="col-xl-12 ">
+                        <div style="height: 80%;">
+                        <img src="images/screen-shot-2021-10-27-at-4.29.49-pm-copy-1-.jpg" width="100%"  alt="">
+                        </div>
+                        <p> BnA Alter Museum <br>
+                            Art Direction Video Production Website
+                        </p>
+                    </div>
+                    <div class="col-xl-12 ">
+                        <div style="height: 80%;">
+                        <img src="images/bna_thumb-1-.jpg" width="100%"  alt="">
+                        </div>
+                        <p> BnA Alter Museum <br>
+                            Art Direction Video Production Website
+                        </p>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div id="col2" class="col-xl-6 mt-5 ">
+               
+                <div class="row">
+                    <div class="col-xl-12 ">
+                        <div style="height: 80%;">
+                        <img src="images/superdan_thumbnail.jpg" width="100%" alt="">
+                        </div>
+                        <p> BnA Alter Museum <br>
+                            Art Direction Video Production Website
+                        </p>
+                    </div>
+                    <div class="col-xl-12 ">
+                        <div style="height: 80%;">
+                        <img src="images/murakami-thumbnail.jpg" width="100%" alt="">
+                    </div>
+                        <p> BnA Alter Museum <br>
+                            Art Direction Video Production Website
+                        </p>
+                    </div>
+                    <div class="col-lg-12 ">
+                        <div style="height: 80%;">
+                        <img src="images/freefire-thumbnail.jpg" width="100%" alt="">
+                        </div>
+                        <p> BnA Alter Museum <br>
+                            Art Direction Video Production Website
+                        </p>
+                    </div>
+                    <div class="col-xl-12 ">
+                        <div style="height: 80%;">
+                        <img src="images/dame-de-soie-thumbnail.jpg" width="100%" alt="">
+                        </div>
+                        <p> BnA Alter Museum <br>
+                            Art Direction Video Production Website
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------S1------------------->
+         
+             <!--------------------S2------------------->
+         <div class="s2">
+             <section  class="container text-center">
+                 <h5 class="text-white">They trust us</h5>
+                 <p class="text-center display-5 mt-5">Nike, Canada, Goose Mercari, Louis Vuitton, <br> Shiseido, Amazon Fashion, adidas, Hypebeast, <br> Chupa Chups, JAL airlines, JETRO, Yonex, Toyota, <br> Sony, Yamaha. </p>
+                 <button> &#8594 More project on monopo.tokyo</button>
+             </section>
+         </div>
+             <!--------------------S2------------------->
+         
+             <!--------------------TEXT------------------->
+         
+             <section class="container">
+                 <h5 class="text-white">&#8594 Manifesto</h5>
+                 <p class="display-1" style="opacity: 0.4; letter-spacing: 0.2rem;">
+                     Collaborate, and <br>
+                     Challenge. <br>
+                     We are digital natives <br>
+                     embracing the <br>
+                     creative freedom to <br>
+                     produce solutions <br>
+                     that connect, <br>
+                     communicate, and <br>
+                     inspire. <br>
+         
+                 </p>
+         
+             </section>
+             <!--------------------TEXT------------------->
+         
+              <!--------------------s3------------------->
+         <div class="s3">
+             <section id="s3" class="container mt-5 top">
+                 <div class="container-xl mb-5">
+                     <h5 class="text-white mt-5">INTEGRATE</h5>
+                     <div class="row gx-5">
+                     <div class="row mt-5">
+                         <div class="col-xl-6">
+                             <video muted autoplay loop style="width:300px" >
+                                <source src="images/integrate_web3dasset.webm" >
+                            </video>
+                         </div>
+                         <div class="col-xl-6 fs-3 mt-3 text-white"><sup class="fs-5 me-4">01</sup>Born in Asia, raised by the world — <br> monopo is the global fulcrum between <br> East and West. We blur boundaries of <br> difference, creating design that stands <br> the test of time.</div>
+                     </div>
+                 </div>
+                 </div>
+                 <div class="container-xl top mb-5">
+                     <h5 class="text-white mt-5">INTEGRATE</h5>
+                     <div class="row gx-5">
+                     <div class="row mt-5">
+                         <div class="col-xl-6">
+                             <video src="images/we2.webm" muted autoplay loop style="width:300px" ></video>
+                         </div>
+                         <div class="col-xl-6 fs-3 mb-5 text-white"><sup class="fs-5 me-4">02</sup>Collaboration over competition — <br> Creativity, for monopo saigon, is like <br> having a nabe with friends where we <br> combine the creativity that sets us <br> apart. Through collaborative initiative, <br> we bring your visions to fruition.
+                     </div>
+                 </div>
+                 </div>
+                 <div class="container-xl top mb-5">
+                     <h5 class="text-white mt-5">INTEGRATE</h5>
+                     <div class="row gx-5">
+                        <div class="row mt-5">
+                         <div class="col-xl-6">
+                             <video src="images/w3.webm" muted autoplay loop style="width:300px" ></video>
+                         </div>
+                         <div class="col-xl-6 fs-3 mt-3 text-white"><sup class="fs-5 me-4">03</sup>We create to evoke — We start <br> where others stop, we question the <br> norms, we refuse to be redundant, <br> monopo saigon seeks to deliver original <br> creative solutions.
+                            </div>
+                            </div>
+                        </div>
+             </section>
+             <!--------------------S3------------------->
+         
+         
+         
+             <!--------------------S4------------------->
+             <section id="s4" class="text-white">
+                <p>Discover Saigon Soul Discover Saigon Soul</p> 
+             </section>
+         </div>
+             <section class="container-fluid text-center">
+                 <video width="100%" height="10%" autoplay loop muted playsinline >
+                     <source src="images/monopo_showreel_-saigon_updated-_4.mp4">
+                     <source src="images/monopo-reel-saigon.mp4" >
+                 </video>
+             </section>
+             <section id="s5"  class="container-md">
+                 <h5 class="text-white">&#8594 Saigon Soul</h5>
+                     <div class="row mt-5">
+                         <div class="col-md-6">
+                             <p class="fs-5">Saigon Souls captures a state of <br> mind. You are Saigonese if you feel <br> like you are, whether you just <br> arrived, just returned or have been <br> living here your whole life. Most of <br> all, just being in Saigon makes you <br> part of the Saigon Souls.</p>
+                         </div>
+                         <div id="btn" class="col-md-6 text-center">
+                         <button style="background: #1c1c1c; outline: none; border: none; color: white; padding: 20px 70px; border-radius: 30px;">Discover Saigon Soul</button>
+                         </div>
+                 </div>
+             </section>
+             <!--------------------S4------------------->
+         
+         
+             <!--------------------S6------------------->
+         
+         <div id="sup6"  style="  position: relative; height: 70vh; width: 100vw; overflow: hidden; ">
+             <section id="s6" class="container-fluid" style=" position: absolute; top: 0%; left: -10%; transform: rotate(50deg) translate(-20%,-20%) scale(1.5);min-width: 720px; " >
+                 <div class="d-flex mb-3" style="min-width: 1200px; min-height:100% ;"  >
+                     <div  >
+                        <div style="height: 100%;"> <img src="slider/col1.jpg" width="100%" height="100%"  alt=""></div>
+                     </div>
+                     <div >
+                        <div> <img src="slider/col1-2.jpg" width="100%" height="100%" alt=""></div>
+                     </div>
+                     <div>
+                        <div> <img src="slider/col1-3.jpg"  width="100%" height="100%" alt=""></div>
+                     </div>
+                 </div>
+                 <div class="d-flex mb-3" style="min-width: 1200px; min-height:100% ;"    >
+                     <div >
+                        <div> <img src="slider/col2-1.jpg" width="100%" height="100%"  alt=""></div>
+                     </div>
+                     <div >
+                        <div> <img src="slider/col2-2.jpg" width="100%" height="100%" alt=""></div>
+                     </div>
+                     <div >
+                        <div> <img src="slider/col2-3.jpg" width="100%" height="100%"  alt=""></div>
+                     </div>
+                 </div>
+                 <div class="d-flex mb-3" style="min-width: 1200px; min-height:100% ;">
+                     <div >
+                        <div> <img src="slider/col3.jpg" width="100%" height="100%" > </div></div>
+                     <div > <div> <img src="slider/col3-2.jpg" width="100%" height="100%" alt=""></div></div>
+                     <div > <div> <img src="slider/col3-3.jpg" width="100%" height="100%" alt=""></div></div>
+                 </div>
+             </section>
+         </div>
+             <!--------------------S6------------------->
+         
+             <!--------------------S7------------------->
+         
+         <div id="s7" >
+         <section class="container-xl" style="height: 100vh;">
+             <img id="bg2" src="images/bg2.jpg" alt="">
+             <div class="tx">
+             <sup class="text-white  "><span class="me-2">&#8594</span>  Team</sup>
+             <p class="display-1 mt-5">From Tokyo to Saigon, <br>
+                 We come from all <br>
+                 over the world <br>
+                 </p>
+             </div>
+         </section>
+             <!--------------------S7------------------->
+         
+         
+             <!--------------------S8------------------->
+         
+         <div id="s8">
+         <section class="container-xl text-white">
+             <div class="d-flex justify-content-center">
+             <div class="row">
+                 <div class="col-xl-12"  id="bor" >
+                     <div><sup>BRANCH DIRECTOR, CREATIVE DIRECTOR</sup></div>
+                  <div style="width: 100%; height: 78%; overflow: hidden;"> <div style="width: 100%; height: 100%;"  > <img src="founder/p1.jpg" width="420px" height="100%" style="transform: translateY(3%) scale(1.38);" alt=""></div></div> 
+                  <div class="d-flex justify-content-between" ><div> <p class="fs-3" >Vicki <br> Dang</p></div><div><p>01</p></div></div>        
+                 </div>
+             </div>
+             </div>
+         
+         </section>
+         <section id="w1" class="container-xl text-white">
+             <div class="d-flex justify-content-start">
+             <div class="row">
+                 <div class="col-xl-12" id="bor" >
+                     <div><sup>BRANCH DIRECTOR, FILM DIRECTOR</sup></div>
+                  <div style="width: 100%; height: 78%;"> <div style="width: 100%; height: 100%;"  > <img src="founder/p2.jpg" width="420px" height="100%" style="transform: translateY(10%) scale(1.1);" alt=""></div></div> 
+                  <div class="d-flex justify-content-between" ><div> <p class="fs-3" >Robin <br> Mahieux</p></div><div><p>02</p></div></div>
+                    
+                 </div>
+             </div>
+             </div>
+         </section>
+         
+         <section class="container-xl text-white">
+             <div class="d-flex justify-content-center">
+             <div class="row">
+                 <div class="col-xl-12" id="bor">
+                     <div><sup>BRANCH DIRECTOR, CREATIVE DIRECTO</sup></div>
+                  <div style="width: 100%; height: 78%;"> <div style="width: 100%; height: 100%;"  > <img src="founder/p3.jpg" width="420px" height="100%" style="transform: translateY(0%) scale(1.1);" alt=""></div></div> 
+                  <div class="d-flex justify-content-between" ><div> <p class="fs-3" >Yoshiyuki <br>Sasaki</p></div><div><p>03</p></div></div>
+                 </div>
+             </div>
+             </div>
+         </section>
+         
+         <section id="w1" class="container-xl text-white">
+             <div class="d-flex justify-content-start">
+             <div class="row">
+                 <div class="col-xl-12" id="bor">
+                     <div><sup>CEO & CO-FOUNDER OF MONOPO INC. / MONOPO TOKYO</sup></div>
+                  <div style="width: 100%; height: 78%;"> <div style="width: 100%; height: 100%;"  > <img src="founder/p4.jpg" width="420px" height="100%" style="transform: translateY(0%) ;" alt=""></div></div> 
+                  <div class="d-flex justify-content-between" ><div> <p class="fs-3" >Shun<br>Okada</p></div><div><p>04</p></div></div>
+                 </div>
+             </div>
+             </div>
+         </section>
+         
+         <section id="w1" class="container-xl text-white">
+             <div class="d-flex justify-content-center">
+             <div class="row">
+                 <div class="col-xl-12" id="bor">
+                     <div><sup>COO, CTO & CO-FOUNDER OF MONOPO INC. / MONOPO TOKYO </sup></div>
+                  <div style="width: 100%; height: 78%;"> <div style="width: 100%; height: 100%;"  > <img src="founder/p5.jpg" width="420px" height="100%" style="transform: translateY(-5%) scale(1.2);" alt=""></div></div> 
+                  <div class="d-flex justify-content-between" ><div> <p class="fs-3" >Tran Minh <br>Villageois</p></div><div><p>05</p></div></div>
+                 </div>
+             </div>
+             </div>
+         </section>
+         
+         <section id="w1" class="container-xl text-white">
+             <div class="d-flex justify-content-start">
+             <div class="row">
+                 <div class="col-xl-12" id="bor">
+                     <div><sup>GLOBAL DEVELOPMENT DIRECTOR OF MONOPO INC.</sup></div>
+                  <div style="width: 100%; height: 78%;"> <div style="width: 100%; height: 100%;"  > <img src="founder/p6.jpg" width="420px" height="100%" style="transform: translateY(0%) scale(1.1);" alt=""></div></div> 
+                  <div class="d-flex justify-content-between" ><div> <p class="fs-3" >Georgi <br>Roberts</p></div><div><p>06</p></div></div>
+                 </div>
+             </div>
+             </div>
+         </section>
+         </div>
+             <!--------------------S8------------------->
+         
+         
+         </body>
+</html>
